@@ -1,13 +1,13 @@
 # Fiber Photometry processing pipeline
-This is a pipeline in development to process Fiber Photometry data adapted to a fiber acquisition standard defined here: [Fiber Photometry Acquisition Standard](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/file_formats/fip.md). NOTE: The data currently attached to the pipeline is a subset of the standard defined, and is only meant for testing purposes. Currently is `fiber_standard` folder in the pipeline.
+This is a pipeline in development to process Fiber Photometry data adapted to a fiber acquisition standard defined here: [Fiber Photometry Acquisition Standard](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/file_formats/fip.md).
 
-The [fiber photometry pipeline](https://codeocean.allenneuraldynamics.org/capsule/7378248/tree) runs on [Nextflow](https://www.nextflow.io/) and contains the following steps:
+The [fiber photometry pipeline](https://codeocean.allenneuraldynamics.org/capsule/0885100/tree) runs on [Nextflow](https://www.nextflow.io/) and contains the following steps:
 
-* [aind-fip-nwb-base-capsule](https://github.com/AllenNeuralDynamics/aind-fip-nwb-base-capsule/tree/feat-add-new-file-standard): FiberPhotometry Capsule which appends to an NWB subject file. Currently in development for new standard
+* [aind-fip-nwb-base-capsule](https://github.com/AllenNeuralDynamics/aind-fip-nwb-base-capsule-standalone): FiberPhotometry Capsule which appends to an NWB subject file and packages raw timeseries data.
 
 * [aind-fip-dff](https://github.com/AllenNeuralDynamics/aind-fip-dff): Processes input NWB files containing raw fiber photometry data by generating baseline-corrected (ΔF/F) and motion-corrected traces, which are then appended back to the NWB file.
 
-* [aind-fip-qc-raw](https://github.com/AllenNeuralDynamics/aind-fip-qc-raw/tree/feat-add-new-file-standard): QC capsule for fiber photometry. Currently in development for new standard.
+* [aind-fip-qc-raw](https://github.com/AllenNeuralDynamics/aind-fip-qc-raw): QC capsule for fiber photometry. Currently in development for new standard.
 
 * [aind-generic-quality-control-evaluation-aggregator](https://github.com/AllenNeuralDynamics/aind-generic-quality-control-evaluation-aggregator): Combines QC outputs into one QC JSON
 
