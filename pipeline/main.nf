@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:840c308ec97c05cf4c0c854dc0dea9173f239c3de5ae5e42777be17519c1857e
+// hash:sha256:b5bb5203ff412fa93e56103b1973986603eeaccecde009dffcf9249f031ea064
 
 // capsule - aind-fip-nwb-base-standalone
 process capsule_aind_fip_nwb_base_standalone_2 {
@@ -14,6 +14,7 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 
 	output:
 	path 'capsule/results/*', emit: to_capsule_aind_fip_dff_3_4
+	path 'capsule/results/alignment-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5
 
 	script:
 	"""
@@ -35,7 +36,7 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4679507.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 14c5435a22848d94e71d7824246aa57542d4a499 --quiet
+	git -C capsule-repo checkout 8922b86cb8cc1c70554e155e3b3bf5ac7e7e1168 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -60,7 +61,7 @@ process capsule_aind_fip_qc_raw_1 {
 	path 'capsule/data/fiber_raw_data'
 
 	output:
-	path 'capsule/results/*', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7
+	path 'capsule/results/*', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_8
 
 	script:
 	"""
@@ -110,8 +111,8 @@ process capsule_aind_fip_dff_3 {
 
 	output:
 	path 'capsule/results/nwb'
-	path 'capsule/results/*.json', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5
-	path 'capsule/results/dff-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6
+	path 'capsule/results/*.json', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6
+	path 'capsule/results/dff-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7
 
 	script:
 	"""
@@ -156,6 +157,7 @@ process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
+	path 'capsule/data/alignment-qc'
 	path 'capsule/data/'
 	path 'capsule/data/dff-qc'
 	path 'capsule/data/'
@@ -195,7 +197,7 @@ process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 	"""
 }
 
-params.fiber_raw_data_url = 's3://aind-private-data-prod-o5171v/behavior_752703_2024-11-20_13-01-14'
+params.fiber_raw_data_url = 's3://aind-open-data/behavior_746346_2025-03-10_17-34-18'
 
 workflow {
 	// input data
@@ -207,5 +209,5 @@ workflow {
 	capsule_aind_fip_nwb_base_standalone_2(fiber_raw_data_to_aind_fip_nwb_base_standalone_2.collect())
 	capsule_aind_fip_qc_raw_1(fiber_raw_data_to_aind_fip_qc_raw_1.collect())
 	capsule_aind_fip_dff_3(fiber_raw_data_to_aind_fip_dff_3.collect(), capsule_aind_fip_nwb_base_standalone_2.out.to_capsule_aind_fip_dff_3_4.collect())
-	capsule_aind_generic_quality_control_evaluation_aggregator_4(capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5.collect(), capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6, capsule_aind_fip_qc_raw_1.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7.collect())
+	capsule_aind_generic_quality_control_evaluation_aggregator_4(capsule_aind_fip_nwb_base_standalone_2.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5, capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6.collect(), capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7, capsule_aind_fip_qc_raw_1.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_8.collect())
 }

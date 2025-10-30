@@ -16,7 +16,7 @@
 			"inputs": [
 				{
 					"id": "13Ulx8iSH6XajMco",
-					"source_id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+					"source_id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
@@ -31,7 +31,7 @@
 				"id": "cdefa359-e1f9-45c9-9fe7-7f42b87983e9",
 				"name": "aind-fip-nwb-base-standalone",
 				"slug": "4679507",
-				"commit": "14c5435a22848d94e71d7824246aa57542d4a499",
+				"commit": "8922b86cb8cc1c70554e155e3b3bf5ac7e7e1168",
 				"image_tag": "76dbce66876e104f2eefe2c57f82f223"
 			},
 			"resources": {
@@ -41,7 +41,7 @@
 			"inputs": [
 				{
 					"id": "nijEaIKQNB7nILi2",
-					"source_id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+					"source_id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
@@ -65,7 +65,7 @@
 			"inputs": [
 				{
 					"id": "Vxpb7BUH9unxo61P",
-					"source_id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+					"source_id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
@@ -98,6 +98,14 @@
 				"memory": 8
 			},
 			"inputs": [
+				{
+					"id": "babNwq4D4DTbXUNF",
+					"source_id": "capsule_aind_fip_nwb_base_standalone_2",
+					"type": "capsule",
+					"name": "aind-fip-nwb-base-standalone",
+					"source_path": "alignment-qc",
+					"target_path": "alignment-qc"
+				},
 				{
 					"id": "W5zrn2OHRsFLxxAY",
 					"source_id": "capsule_aind_fip_dff_3",

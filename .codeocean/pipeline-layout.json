@@ -1,21 +1,18 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__d46f8f0e-b8fe-41e1-8048-5d36d7460612-capsule_aind_fip_qc_raw_1",
-			"selected": false,
-			"source": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"id": "xy-edge__fb8b45e7-3ac9-4839-994f-8d228343cab3-capsule_aind_fip_qc_raw_1",
+			"source": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
 			"target": "capsule_aind_fip_qc_raw_1"
 		},
 		{
-			"id": "xy-edge__d46f8f0e-b8fe-41e1-8048-5d36d7460612-capsule_aind_fip_nwb_base_standalone_2",
-			"selected": false,
-			"source": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"id": "xy-edge__fb8b45e7-3ac9-4839-994f-8d228343cab3-capsule_aind_fip_nwb_base_standalone_2",
+			"source": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
 			"target": "capsule_aind_fip_nwb_base_standalone_2"
 		},
 		{
-			"id": "xy-edge__d46f8f0e-b8fe-41e1-8048-5d36d7460612-capsule_aind_fip_dff_3",
-			"selected": false,
-			"source": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"id": "xy-edge__fb8b45e7-3ac9-4839-994f-8d228343cab3-capsule_aind_fip_dff_3",
+			"source": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
 			"target": "capsule_aind_fip_dff_3"
 		},
 		{
@@ -46,18 +43,14 @@
 			"id": "xy-edge__capsule_aind_generic_quality_control_evaluation_aggregator_4-results",
 			"source": "capsule_aind_generic_quality_control_evaluation_aggregator_4",
 			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_aind_fip_nwb_base_standalone_2-capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"source": "capsule_aind_fip_nwb_base_standalone_2",
+			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
 		}
 	],
 	"nodes": [
-		{
-			"id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
-			"position": {
-				"x": 981.7777506510416,
-				"y": 215.1111043294271
-			},
-			"selected": false,
-			"type": "dataset"
-		},
 		{
 			"data": {
 				"capsule_id": "3ae91e80-10b6-4659-814a-8afee9359a40"
@@ -114,12 +107,20 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+			"position": {
+				"x": 981.7777506510416,
+				"y": 215.1111043294271
+			},
+			"type": "dataset"
 		}
 	],
-	"timestamp": 1761848208574,
+	"timestamp": 1761867435944,
 	"viewport": {
-		"x": -31,
-		"y": -227,
+		"x": 31,
+		"y": -140,
 		"zoom": 0.75
 	}
 }
