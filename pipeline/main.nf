@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:834ebca5ff69d33fc06b3dcb9fccaaff42dea6a3a1b1feee5e8969009920e551
+// hash:sha256:840c308ec97c05cf4c0c854dc0dea9173f239c3de5ae5e42777be17519c1857e
 
 // capsule - aind-fip-nwb-base-standalone
 process capsule_aind_fip_nwb_base_standalone_2 {
 	tag 'capsule-4679507'
-	container "$REGISTRY_HOST/capsule/cdefa359-e1f9-45c9-9fe7-7f42b87983e9"
+	container "$REGISTRY_HOST/capsule/cdefa359-e1f9-45c9-9fe7-7f42b87983e9:76dbce66876e104f2eefe2c57f82f223"
 
 	cpus 1
 	memory '7.5 GB'
@@ -35,6 +35,7 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4679507.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 14c5435a22848d94e71d7824246aa57542d4a499 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 

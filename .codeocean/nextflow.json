@@ -30,7 +30,9 @@
 			"capsule": {
 				"id": "cdefa359-e1f9-45c9-9fe7-7f42b87983e9",
 				"name": "aind-fip-nwb-base-standalone",
-				"slug": "4679507"
+				"slug": "4679507",
+				"commit": "14c5435a22848d94e71d7824246aa57542d4a499",
+				"image_tag": "76dbce66876e104f2eefe2c57f82f223"
 			},
 			"resources": {
 				"cpus": 1,
