@@ -1,0 +1,9 @@
+{
+	"version": 1,
+	"attached_datasets": [
+		{
+			"id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"mount": "fiber_raw_data"
+		}
+	]
+}

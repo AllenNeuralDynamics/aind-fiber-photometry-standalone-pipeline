@@ -1,0 +1,128 @@
+{
+	"version": 2,
+	"processes": [
+		{
+			"name": "capsule_aind_fip_qc_raw_1",
+			"capsule": {
+				"id": "3ae91e80-10b6-4659-814a-8afee9359a40",
+				"name": "aind-fip-qc-raw",
+				"slug": "8999280",
+				"version": 8
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "13Ulx8iSH6XajMco",
+					"source_id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+					"type": "dataset",
+					"name": "fiber_raw_data",
+					"source_path": "fiber_raw_data/",
+					"target_path": "fiber_raw_data",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_aind_fip_nwb_base_standalone_2",
+			"capsule": {
+				"id": "cdefa359-e1f9-45c9-9fe7-7f42b87983e9",
+				"name": "aind-fip-nwb-base-standalone",
+				"slug": "4679507"
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "nijEaIKQNB7nILi2",
+					"source_id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+					"type": "dataset",
+					"name": "fiber_raw_data",
+					"source_path": "fiber_raw_data/",
+					"target_path": "fiber_raw_data",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_aind_fip_dff_3",
+			"capsule": {
+				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
+				"name": "aind-fip-dff",
+				"slug": "1001867",
+				"version": 13
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "Vxpb7BUH9unxo61P",
+					"source_id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+					"type": "dataset",
+					"name": "fiber_raw_data",
+					"source_path": "fiber_raw_data/",
+					"target_path": "fiber_raw_data",
+					"collect": true
+				},
+				{
+					"id": "wH714lSlW49WLVQq",
+					"source_id": "capsule_aind_fip_nwb_base_standalone_2",
+					"type": "capsule",
+					"name": "aind-fip-nwb-base-standalone",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
+				"source_path": "nwb"
+			}
+		},
+		{
+			"name": "capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"capsule": {
+				"id": "03b3acfd-fdef-46b0-ad80-50e9d4e00827",
+				"name": "aind-generic-quality-control-evaluation-aggregator",
+				"slug": "5290719",
+				"version": 1
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "W5zrn2OHRsFLxxAY",
+					"source_id": "capsule_aind_fip_dff_3",
+					"type": "capsule",
+					"name": "aind-fip-dff",
+					"source_path": "*.json",
+					"collect": true
+				},
+				{
+					"id": "imhCYI0kHn1pzOzr",
+					"source_id": "capsule_aind_fip_dff_3",
+					"type": "capsule",
+					"name": "aind-fip-dff",
+					"source_path": "dff-qc",
+					"target_path": "dff-qc"
+				},
+				{
+					"id": "uqyXKnfnxrMjHmkH",
+					"source_id": "capsule_aind_fip_qc_raw_1",
+					"type": "capsule",
+					"name": "aind-fip-qc-raw",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "03b3acfd-fdef-46b0-ad80-50e9d4e00827"
+			}
+		}
+	]
+}

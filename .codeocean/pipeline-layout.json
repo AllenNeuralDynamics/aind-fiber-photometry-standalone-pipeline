@@ -1,0 +1,125 @@
+{
+	"edges": [
+		{
+			"id": "xy-edge__d46f8f0e-b8fe-41e1-8048-5d36d7460612-capsule_aind_fip_qc_raw_1",
+			"selected": false,
+			"source": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"target": "capsule_aind_fip_qc_raw_1"
+		},
+		{
+			"id": "xy-edge__d46f8f0e-b8fe-41e1-8048-5d36d7460612-capsule_aind_fip_nwb_base_standalone_2",
+			"selected": false,
+			"source": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"target": "capsule_aind_fip_nwb_base_standalone_2"
+		},
+		{
+			"id": "xy-edge__d46f8f0e-b8fe-41e1-8048-5d36d7460612-capsule_aind_fip_dff_3",
+			"selected": false,
+			"source": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"target": "capsule_aind_fip_dff_3"
+		},
+		{
+			"id": "xy-edge__capsule_aind_fip_nwb_base_standalone_2-capsule_aind_fip_dff_3",
+			"selected": false,
+			"source": "capsule_aind_fip_nwb_base_standalone_2",
+			"target": "capsule_aind_fip_dff_3"
+		},
+		{
+			"id": "xy-edge__capsule_aind_fip_qc_raw_1-capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"selected": false,
+			"source": "capsule_aind_fip_qc_raw_1",
+			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
+		},
+		{
+			"id": "xy-edge__capsule_aind_fip_dff_3-capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"selected": false,
+			"source": "capsule_aind_fip_dff_3",
+			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
+		},
+		{
+			"id": "xy-edge__capsule_aind_fip_dff_3-results",
+			"selected": true,
+			"source": "capsule_aind_fip_dff_3",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_aind_generic_quality_control_evaluation_aggregator_4-results",
+			"source": "capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"target": "results"
+		}
+	],
+	"nodes": [
+		{
+			"id": "d46f8f0e-b8fe-41e1-8048-5d36d7460612",
+			"position": {
+				"x": 981.7777506510416,
+				"y": 215.1111043294271
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "3ae91e80-10b6-4659-814a-8afee9359a40"
+			},
+			"id": "capsule_aind_fip_qc_raw_1",
+			"position": {
+				"x": 483.111083984375,
+				"y": 695.1111043294271
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "results",
+			"position": {
+				"x": 1003.1110839843749,
+				"y": 1419.111104329427
+			},
+			"selected": false,
+			"type": "results"
+		},
+		{
+			"data": {
+				"capsule_id": "cdefa359-e1f9-45c9-9fe7-7f42b87983e9"
+			},
+			"id": "capsule_aind_fip_nwb_base_standalone_2",
+			"position": {
+				"x": 885.7777506510419,
+				"y": 744.4444376627604
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e"
+			},
+			"id": "capsule_aind_fip_dff_3",
+			"position": {
+				"x": 1315.111083984375,
+				"y": 1023.111104329427
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "03b3acfd-fdef-46b0-ad80-50e9d4e00827"
+			},
+			"id": "capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"position": {
+				"x": 565.7777506510416,
+				"y": 1257.7777709960933
+			},
+			"selected": false,
+			"type": "capsule"
+		}
+	],
+	"timestamp": 1761848208574,
+	"viewport": {
+		"x": -31,
+		"y": -227,
+		"zoom": 0.75
+	}
+}
