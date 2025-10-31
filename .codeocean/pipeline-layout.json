@@ -35,7 +35,7 @@
 		},
 		{
 			"id": "xy-edge__capsule_aind_fip_dff_3-results",
-			"selected": true,
+			"selected": false,
 			"source": "capsule_aind_fip_dff_3",
 			"target": "results"
 		},
@@ -74,14 +74,14 @@
 		},
 		{
 			"data": {
-				"capsule_id": "cdefa359-e1f9-45c9-9fe7-7f42b87983e9"
+				"capsule_id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b"
 			},
 			"id": "capsule_aind_fip_nwb_base_standalone_2",
 			"position": {
 				"x": 885.7777506510419,
 				"y": 744.4444376627604
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -117,7 +117,7 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1761867435944,
+	"timestamp": 1761872433015,
 	"viewport": {
 		"x": 31,
 		"y": -140,
