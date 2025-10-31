@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:0f37647769e30b5394d520cb93496964b9229bc702928c4156e29090e409f05a
+// hash:sha256:4b44fa6bcebff0652d518ece906fd31129575778215dfe6134243cac332e0026
 
 // capsule - aind-fip-nwb-base-standalone
 process capsule_aind_fip_nwb_base_standalone_2 {
 	tag 'capsule-1510487'
-	container "$REGISTRY_HOST/published/8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b:v2"
+	container "$REGISTRY_HOST/published/8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b:v3"
 
 	cpus 1
 	memory '7.5 GB'
@@ -32,9 +32,9 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
+		git clone --filter=tree:0 --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
 	else
-		git clone --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
+		git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -51,7 +51,7 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 // capsule - aind-fip-qc-raw
 process capsule_aind_fip_qc_raw_1 {
 	tag 'capsule-8999280'
-	container "$REGISTRY_HOST/published/3ae91e80-10b6-4659-814a-8afee9359a40:v8"
+	container "$REGISTRY_HOST/published/3ae91e80-10b6-4659-814a-8afee9359a40:v9"
 
 	cpus 1
 	memory '7.5 GB'
@@ -78,9 +78,9 @@ process capsule_aind_fip_qc_raw_1 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v8.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8999280.git" capsule-repo
+		git clone --filter=tree:0 --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8999280.git" capsule-repo
 	else
-		git clone --branch v8.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8999280.git" capsule-repo
+		git clone --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8999280.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -196,7 +196,7 @@ process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 	"""
 }
 
-params.fiber_raw_data_url = 's3://aind-open-data/behavior_746346_2025-03-10_17-34-18'
+params.fiber_raw_data_url = 's3://aind-open-data/behavior_778234_2025-06-12_14-16-44'
 
 workflow {
 	// input data

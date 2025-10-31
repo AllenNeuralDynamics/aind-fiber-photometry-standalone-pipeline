@@ -1,18 +1,18 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__fb8b45e7-3ac9-4839-994f-8d228343cab3-capsule_aind_fip_qc_raw_1",
-			"source": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_qc_raw_1",
+			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
 			"target": "capsule_aind_fip_qc_raw_1"
 		},
 		{
-			"id": "xy-edge__fb8b45e7-3ac9-4839-994f-8d228343cab3-capsule_aind_fip_nwb_base_standalone_2",
-			"source": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_nwb_base_standalone_2",
+			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
 			"target": "capsule_aind_fip_nwb_base_standalone_2"
 		},
 		{
-			"id": "xy-edge__fb8b45e7-3ac9-4839-994f-8d228343cab3-capsule_aind_fip_dff_3",
-			"source": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_dff_3",
+			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
 			"target": "capsule_aind_fip_dff_3"
 		},
 		{
@@ -23,7 +23,6 @@
 		},
 		{
 			"id": "xy-edge__capsule_aind_fip_qc_raw_1-capsule_aind_generic_quality_control_evaluation_aggregator_4",
-			"selected": false,
 			"source": "capsule_aind_fip_qc_raw_1",
 			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
 		},
@@ -51,18 +50,6 @@
 		}
 	],
 	"nodes": [
-		{
-			"data": {
-				"capsule_id": "3ae91e80-10b6-4659-814a-8afee9359a40"
-			},
-			"id": "capsule_aind_fip_qc_raw_1",
-			"position": {
-				"x": 483.111083984375,
-				"y": 695.1111043294271
-			},
-			"selected": false,
-			"type": "capsule"
-		},
 		{
 			"id": "results",
 			"position": {
@@ -109,18 +96,30 @@
 			"type": "capsule"
 		},
 		{
-			"id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+			"id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
 			"position": {
 				"x": 981.7777506510416,
 				"y": 215.1111043294271
 			},
 			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "3ae91e80-10b6-4659-814a-8afee9359a40"
+			},
+			"id": "capsule_aind_fip_qc_raw_1",
+			"position": {
+				"x": 483.111083984375,
+				"y": 695.1111043294271
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1761872433015,
+	"timestamp": 1761947098774,
 	"viewport": {
-		"x": 31,
-		"y": -140,
+		"x": -264,
+		"y": -189,
 		"zoom": 0.75
 	}
 }

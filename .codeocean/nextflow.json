@@ -7,7 +7,7 @@
 				"id": "3ae91e80-10b6-4659-814a-8afee9359a40",
 				"name": "aind-fip-qc-raw",
 				"slug": "8999280",
-				"version": 8
+				"version": 9
 			},
 			"resources": {
 				"cpus": 1,
@@ -16,7 +16,7 @@
 			"inputs": [
 				{
 					"id": "13Ulx8iSH6XajMco",
-					"source_id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+					"source_id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
@@ -31,7 +31,7 @@
 				"id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b",
 				"name": "aind-fip-nwb-base-standalone",
 				"slug": "1510487",
-				"version": 2
+				"version": 3
 			},
 			"resources": {
 				"cpus": 1,
@@ -40,7 +40,7 @@
 			"inputs": [
 				{
 					"id": "nijEaIKQNB7nILi2",
-					"source_id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+					"source_id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
@@ -64,7 +64,7 @@
 			"inputs": [
 				{
 					"id": "Vxpb7BUH9unxo61P",
-					"source_id": "fb8b45e7-3ac9-4839-994f-8d228343cab3",
+					"source_id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
