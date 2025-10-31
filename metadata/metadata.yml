@@ -1,2 +1,8 @@
 metadata_version: 1
-name: Fiber Photometry Standalone
+name: Fiber Photometry Standalone Pipeline
+description: Pipeline to process only fiber photometry data
+authors:
+- name: Ahad Bawany
+- name: Arjun Sridhar
+- name: Arielle Leon
+- name: Johannes Friedrich
