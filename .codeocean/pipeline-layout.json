@@ -17,7 +17,6 @@
 		},
 		{
 			"id": "xy-edge__capsule_aind_fip_nwb_base_standalone_2-capsule_aind_fip_dff_3",
-			"selected": false,
 			"source": "capsule_aind_fip_nwb_base_standalone_2",
 			"target": "capsule_aind_fip_dff_3"
 		},
@@ -58,18 +57,6 @@
 			},
 			"selected": false,
 			"type": "results"
-		},
-		{
-			"data": {
-				"capsule_id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b"
-			},
-			"id": "capsule_aind_fip_nwb_base_standalone_2",
-			"position": {
-				"x": 885.7777506510419,
-				"y": 744.4444376627604
-			},
-			"selected": true,
-			"type": "capsule"
 		},
 		{
 			"data": {
@@ -114,12 +101,19 @@
 			},
 			"selected": true,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b"
+			},
+			"id": "capsule_aind_fip_nwb_base_standalone_2",
+			"position": {
+				"x": 885.7777506510419,
+				"y": 744.4444376627604
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1761947098774,
-	"viewport": {
-		"x": -264,
-		"y": -189,
-		"zoom": 0.75
-	}
+	"timestamp": 1763659377357
 }

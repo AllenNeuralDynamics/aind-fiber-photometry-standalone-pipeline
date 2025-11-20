@@ -1,6 +1,11 @@
 metadata_version: 1
 name: Fiber Photometry Standalone Pipeline
-description: Pipeline to process only fiber photometry data
+description: |-
+  Fiber Photometry processing pipeline
+
+  This is a pipeline in development to process Fiber Photometry data adapted to a fiber acquisition standard defined [here.](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/file_formats/fip.md)
+
+  The [fiber photometry pipeline](https://codeocean.allenneuraldynamics.org/capsule/0885100/tree) runs on [Nextflow](https://www.nextflow.io/)
 authors:
 - name: Ahad Bawany
 - name: Arjun Sridhar
