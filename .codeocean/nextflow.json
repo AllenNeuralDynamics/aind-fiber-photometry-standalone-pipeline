@@ -31,7 +31,7 @@
 				"id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b",
 				"name": "aind-fip-nwb-base-standalone",
 				"slug": "1510487",
-				"version": 5
+				"version": 6
 			},
 			"resources": {
 				"cpus": 1,
