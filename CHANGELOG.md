@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.1...v0.2.2) (2026-03-12)
+
+
+### Bug Fixes
+
+* add .codeocean folder ([640e7e6](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/640e7e684f3df369814477b12856e102d348140e))
+
+
+
 ## [0.2.1](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.0...v0.2.1) (2026-03-12)
 
 
