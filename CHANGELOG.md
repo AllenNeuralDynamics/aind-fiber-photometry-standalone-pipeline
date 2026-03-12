@@ -1,3 +1,17 @@
+# [0.2.0](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.1.1...v0.2.0) (2026-03-12)
+
+
+### Bug Fixes
+
+* modify output path for NWB file into the results container ([2c64dd3](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/2c64dd3de010dfed3c90cf577c71bac74cfe2db5))
+
+
+### Features
+
+* add latest version of aind-dff-fip ([5ffe215](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/5ffe215817b393ecabdaec20717a04e9fd57707d))
+
+
+
 ## [0.1.1](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.1.0...v0.1.1) (2026-03-12)
 
 
