@@ -8,5 +8,5 @@ on:
 jobs:
   release:
     if: ${{github.event.repository.name != 'aind-pipeline-template'}}
-    uses: AllenNeuralDynamics/.github/.github/workflows/release-tag-and-publish-pipeline.yml@fix-changelog
+    uses: AllenNeuralDynamics/.github/.github/workflows/release-tag-and-publish-pipeline.yml@main
     
