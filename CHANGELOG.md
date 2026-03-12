@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.0...v0.2.1) (2026-03-12)
+
+
+### Bug Fixes
+
+* remove ui components so that CO can add them back in and preserve the UI ([8350999](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/8350999949255b06098b4459f459964086aeeaa2))
+
+
+
 # [0.2.0](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.1.1...v0.2.0) (2026-03-12)
 
 
