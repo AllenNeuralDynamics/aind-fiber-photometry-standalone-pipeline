@@ -1,3 +1,12 @@
+## [0.2.4](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.3...v0.2.4) (2026-03-12)
+
+
+### Bug Fixes
+
+* re-add dataset.json ([fcd88a5](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/fcd88a5829d6ea162c275873e45f516d25b7cab7))
+
+
+
 ## [0.2.3](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.2...v0.2.3) (2026-03-12)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * add latest version of aind-dff-fip ([5ffe215](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/5ffe215817b393ecabdaec20717a04e9fd57707d))
-
-
-
-## [0.1.1](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.1.0...v0.1.1) (2026-03-12)
-
-
-### Bug Fixes
-
-* correct channel output ([67c484c](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/67c484c53af3b60c690ce3b96d07b501a1178c5f))
 
 
 
