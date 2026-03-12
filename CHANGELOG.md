@@ -1,4 +1,13 @@
-# 0.1.0 (2026-03-12)
+## [0.1.1](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.1.0...v0.1.1) (2026-03-12)
+
+
+### Bug Fixes
+
+* correct channel output ([67c484c](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/67c484c53af3b60c690ce3b96d07b501a1178c5f))
+
+
+
+# [0.1.0](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/62f232d014bba14c85b2af6a4d54862ad653e025...v0.1.0) (2026-03-12)
 
 
 ### Features
