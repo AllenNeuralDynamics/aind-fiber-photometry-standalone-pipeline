@@ -1,3 +1,12 @@
+## [0.2.3](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.2...v0.2.3) (2026-03-12)
+
+
+### Bug Fixes
+
+* irritating that CO autodeletes the nextflow.json when I pull changes from main :/ :/ ([44d6d47](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/44d6d47dc9f1abc7be10adaf6804b7a984e51c98))
+
+
+
 ## [0.2.2](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.1...v0.2.2) (2026-03-12)
 
 
@@ -36,17 +45,6 @@
 ### Bug Fixes
 
 * correct channel output ([67c484c](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/67c484c53af3b60c690ce3b96d07b501a1178c5f))
-
-
-
-# [0.1.0](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/62f232d014bba14c85b2af6a4d54862ad653e025...v0.1.0) (2026-03-12)
-
-
-### Features
-
-* pipeline updates ([62f232d](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/62f232d014bba14c85b2af6a4d54862ad653e025))
-* update released capsule versions ([e3615bc](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/e3615bca8f0cba7dfccc52f69f4612435ef7e3bc))
-* use released capsules ([8188b43](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/8188b4373cec3ef3491db05b6a9ec5093cda9a83))
 
 
 
