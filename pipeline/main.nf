@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:fc1e01f25ddce08df6bbf464d9c95c1cf66f35f992b00d4cce915b7c736771ea
+// hash:sha256:1b9798c014818a4190f9218b71b2a79533fbeaa2b1221872b20bcd537732cb02
 
 // capsule - aind-fip-nwb-base-standalone
 process capsule_aind_fip_nwb_base_standalone_2 {
