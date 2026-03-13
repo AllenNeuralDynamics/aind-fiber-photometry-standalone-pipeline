@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:1b9798c014818a4190f9218b71b2a79533fbeaa2b1221872b20bcd537732cb02
+// hash:sha256:fc1e01f25ddce08df6bbf464d9c95c1cf66f35f992b00d4cce915b7c736771ea
 
 // capsule - aind-fip-nwb-base-standalone
 process capsule_aind_fip_nwb_base_standalone_2 {
@@ -102,14 +102,14 @@ process capsule_aind_fip_dff_3 {
 	cpus 2
 	memory '15 GB'
 
-	publishDir "$RESULTS_PATH", saveAs: { filename -> filename.matches("capsule/results/fip\\.nwb\\.zarr") ? new File(filename).getName() : null }
+	publishDir "$RESULTS_PATH", saveAs: { filename -> filename.matches("capsule/results/fib\\.nwb\\.zarr") ? new File(filename).getName() : null }
 
 	input:
 	path 'capsule/data/fiber_raw_data'
 	path 'capsule/data/'
 
 	output:
-	path 'capsule/results/fip.nwb.zarr'
+	path 'capsule/results/fib.nwb.zarr'
 	path 'capsule/results/*.json', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6
 	path 'capsule/results/dff-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7
 
