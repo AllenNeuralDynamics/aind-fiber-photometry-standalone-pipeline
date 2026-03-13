@@ -1,21 +1,6 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_qc_raw_1",
-			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
-			"target": "capsule_aind_fip_qc_raw_1"
-		},
-		{
-			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_nwb_base_standalone_2",
-			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
-			"target": "capsule_aind_fip_nwb_base_standalone_2"
-		},
-		{
-			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_dff_3",
-			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
-			"target": "capsule_aind_fip_dff_3"
-		},
-		{
 			"id": "xy-edge__capsule_aind_fip_nwb_base_standalone_2-capsule_aind_fip_dff_3",
 			"source": "capsule_aind_fip_nwb_base_standalone_2",
 			"target": "capsule_aind_fip_dff_3"
@@ -46,6 +31,21 @@
 			"id": "xy-edge__capsule_aind_fip_nwb_base_standalone_2-capsule_aind_generic_quality_control_evaluation_aggregator_4",
 			"source": "capsule_aind_fip_nwb_base_standalone_2",
 			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
+		},
+		{
+			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_nwb_base_standalone_2",
+			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
+			"target": "capsule_aind_fip_nwb_base_standalone_2"
+		},
+		{
+			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_qc_raw_1",
+			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
+			"target": "capsule_aind_fip_qc_raw_1"
+		},
+		{
+			"id": "xy-edge__68b9cdb5-d0ee-488c-99df-da8b085a9c78-capsule_aind_fip_dff_3",
+			"source": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
+			"target": "capsule_aind_fip_dff_3"
 		}
 	],
 	"nodes": [
@@ -83,14 +83,6 @@
 			"type": "capsule"
 		},
 		{
-			"id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
-			"position": {
-				"x": 981.7777506510416,
-				"y": 215.1111043294271
-			},
-			"type": "dataset"
-		},
-		{
 			"data": {
 				"capsule_id": "3ae91e80-10b6-4659-814a-8afee9359a40"
 			},
@@ -99,7 +91,7 @@
 				"x": 483.111083984375,
 				"y": 695.1111043294271
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -111,9 +103,23 @@
 				"x": 885.7777506510419,
 				"y": 744.4444376627604
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
+			"position": {
+				"x": 976.6670162957442,
+				"y": 507.4966756518671
+			},
+			"selected": true,
+			"type": "dataset"
 		}
 	],
-	"timestamp": 1763659377357
+	"timestamp": 1773360691665,
+	"viewport": {
+		"x": -727.5917527195102,
+		"y": -473.6598922712452,
+		"zoom": 0.8860705226602885
+	}
 }

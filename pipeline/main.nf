@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:269f3587c1dc7fee9d556771a95c3cde0758694310a3e212dddb3b5cbb145ab0
+// hash:sha256:83f105a5ea2c8a18897583dee0be40f8193976493a8dc9300c56dc7091beaad1
 
 // capsule - aind-fip-nwb-base-standalone
 process capsule_aind_fip_nwb_base_standalone_2 {
 	tag 'capsule-1510487'
-	container "$REGISTRY_HOST/published/8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b:v6"
+	container "$REGISTRY_HOST/published/8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b:v7"
 
 	cpus 1
 	memory '7.5 GB'
@@ -32,9 +32,9 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v6.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v6.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
+		git -c credential.helper= clone --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -97,10 +97,10 @@ process capsule_aind_fip_qc_raw_1 {
 // capsule - aind-fip-dff
 process capsule_aind_fip_dff_3 {
 	tag 'capsule-1001867'
-	container "$REGISTRY_HOST/published/603a2149-6281-4a7b-bbd6-ff50ca0e064e:v13"
+	container "$REGISTRY_HOST/published/603a2149-6281-4a7b-bbd6-ff50ca0e064e:v15"
 
-	cpus 1
-	memory '7.5 GB'
+	cpus 2
+	memory '15 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> filename.matches("capsule/results/nwb") ? new File(filename).getName() : null }
 
@@ -119,8 +119,8 @@ process capsule_aind_fip_dff_3 {
 	set -e
 
 	export CO_CAPSULE_ID=603a2149-6281-4a7b-bbd6-ff50ca0e064e
-	export CO_CPUS=1
-	export CO_MEMORY=8053063680
+	export CO_CPUS=2
+	export CO_MEMORY=16106127360
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -129,9 +129,9 @@ process capsule_aind_fip_dff_3 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
+		git -c credential.helper= clone --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -148,7 +148,7 @@ process capsule_aind_fip_dff_3 {
 // capsule - aind-generic-quality-control-evaluation-aggregator
 process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 	tag 'capsule-5290719'
-	container "$REGISTRY_HOST/published/03b3acfd-fdef-46b0-ad80-50e9d4e00827:v1"
+	container "$REGISTRY_HOST/published/03b3acfd-fdef-46b0-ad80-50e9d4e00827:v4"
 
 	cpus 1
 	memory '7.5 GB'
@@ -180,9 +180,9 @@ process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5290719.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5290719.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5290719.git" capsule-repo
+		git -c credential.helper= clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5290719.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
