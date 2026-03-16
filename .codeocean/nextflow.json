@@ -16,7 +16,7 @@
 			"inputs": [
 				{
 					"id": "13Ulx8iSH6XajMco",
-					"source_id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
+					"source_id": "fd35087a-e9bd-43c1-a8b7-bbef5825623f",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
@@ -31,7 +31,7 @@
 				"id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b",
 				"name": "aind-fip-nwb-base-standalone",
 				"slug": "1510487",
-				"version": 6
+				"version": 7
 			},
 			"resources": {
 				"cpus": 1,
@@ -40,7 +40,7 @@
 			"inputs": [
 				{
 					"id": "nijEaIKQNB7nILi2",
-					"source_id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
+					"source_id": "fd35087a-e9bd-43c1-a8b7-bbef5825623f",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
@@ -64,7 +64,7 @@
 			"inputs": [
 				{
 					"id": "Vxpb7BUH9unxo61P",
-					"source_id": "68b9cdb5-d0ee-488c-99df-da8b085a9c78",
+					"source_id": "fd35087a-e9bd-43c1-a8b7-bbef5825623f",
 					"type": "dataset",
 					"name": "fiber_raw_data",
 					"source_path": "fiber_raw_data/",
