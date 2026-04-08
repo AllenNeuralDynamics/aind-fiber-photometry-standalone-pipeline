@@ -52,10 +52,9 @@
 		{
 			"name": "capsule_aind_fip_dff_3",
 			"capsule": {
-				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
+				"id": "26792844-1b2c-400d-8514-42d58028e5e5",
 				"name": "aind-fip-dff",
-				"slug": "1001867",
-				"version": 15
+				"slug": "3526719"
 			},
 			"resources": {
 				"cpus": 2,
