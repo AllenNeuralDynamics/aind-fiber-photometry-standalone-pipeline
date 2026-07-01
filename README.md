@@ -1,3 +1,11 @@
+> ## ⚠️ Deprecated: do not use
+>
+> **This repository was never rolled out and was never put into production.** It was an early, fiber-modality-specific standalone pipeline that never went into service, is unmaintained, and is slated to be archived.
+>
+> **Do not use it to process fiber photometry data.** For current fiber photometry processing, use the actively maintained AIND fiber photometry pipeline instead.
+
+---
+
 # Fiber Photometry processing pipeline
 This is a pipeline in development to process Fiber Photometry data adapted to a fiber acquisition standard defined here: [Fiber Photometry Acquisition Standard](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/file_formats/fip.md).
 
