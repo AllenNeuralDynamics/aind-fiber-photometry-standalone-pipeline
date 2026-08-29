@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:1b9798c014818a4190f9218b71b2a79533fbeaa2b1221872b20bcd537732cb02
+// hash:sha256:358f826306705218f2e5c19cb14904b3bfe3c4862a37264be223d5e308746817
 
-// capsule - aind-fip-nwb-base-standalone
-process capsule_aind_fip_nwb_base_standalone_2 {
-	tag 'capsule-1510487'
-	container "$REGISTRY_HOST/published/8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b:v6"
+// capsule - aind-fip-nwb-base-capsule
+process capsule_aind_fip_nwb_base_capsule_2 {
+	tag 'capsule-0550370'
+	container "$REGISTRY_HOST/published/e45742e4-7920-4985-ba36-262bc891377a:v20"
 
 	cpus 1
 	memory '7.5 GB'
@@ -13,7 +13,7 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 	path 'capsule/data/fiber_raw_data'
 
 	output:
-	path 'capsule/results/*', emit: to_capsule_aind_fip_dff_3_4
+	path 'capsule/results/*', emit: to_capsule_aind_fip_dff_3_3
 	path 'capsule/results/alignment-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5
 
 	script:
@@ -21,7 +21,7 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b
+	export CO_CAPSULE_ID=e45742e4-7920-4985-ba36-262bc891377a
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -32,9 +32,9 @@ process capsule_aind_fip_nwb_base_standalone_2 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v6.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v20.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0550370.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v6.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1510487.git" capsule-repo
+		git -c credential.helper= clone --branch v20.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0550370.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -102,14 +102,14 @@ process capsule_aind_fip_dff_3 {
 	cpus 2
 	memory '15 GB'
 
-	publishDir "$RESULTS_PATH", saveAs: { filename -> filename.matches("capsule/results/fib\\.nwb\\.zarr") ? new File(filename).getName() : null }
+	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> filename.matches("capsule/results/nwb") ? new File(filename).getName() : null }
 
 	input:
+	path 'capsule/data/fiber_raw_nwb/'
 	path 'capsule/data/fiber_raw_data'
-	path 'capsule/data/'
 
 	output:
-	path 'capsule/results/fib.nwb.zarr'
+	path 'capsule/results/nwb'
 	path 'capsule/results/*.json', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6
 	path 'capsule/results/dff-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7
 
@@ -153,7 +153,7 @@ process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/alignment-qc'
@@ -196,17 +196,17 @@ process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 	"""
 }
 
-params.fiber_raw_data_url = 's3://aind-open-data/behavior_778234_2025-06-12_14-16-44'
+params.fiber_raw_data_url = 's3://aind-open-data/behavior_821786_2026-02-23_14-13-33'
 
 workflow {
 	// input data
 	fiber_raw_data_to_aind_fip_qc_raw_1 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
-	fiber_raw_data_to_aind_fip_nwb_base_standalone_2 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
-	fiber_raw_data_to_aind_fip_dff_3 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
+	fiber_raw_data_to_aind_fip_nwb_base_capsule_2 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
+	fiber_raw_data_to_aind_fip_dff_4 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
 
 	// run processes
-	capsule_aind_fip_nwb_base_standalone_2(fiber_raw_data_to_aind_fip_nwb_base_standalone_2.collect())
+	capsule_aind_fip_nwb_base_capsule_2(fiber_raw_data_to_aind_fip_nwb_base_capsule_2.collect())
 	capsule_aind_fip_qc_raw_1(fiber_raw_data_to_aind_fip_qc_raw_1.collect())
-	capsule_aind_fip_dff_3(fiber_raw_data_to_aind_fip_dff_3.collect(), capsule_aind_fip_nwb_base_standalone_2.out.to_capsule_aind_fip_dff_3_4.collect())
-	capsule_aind_generic_quality_control_evaluation_aggregator_4(capsule_aind_fip_nwb_base_standalone_2.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5, capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6.collect(), capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7, capsule_aind_fip_qc_raw_1.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_8.collect())
+	capsule_aind_fip_dff_3(capsule_aind_fip_nwb_base_capsule_2.out.to_capsule_aind_fip_dff_3_3.collect(), fiber_raw_data_to_aind_fip_dff_4.collect())
+	capsule_aind_generic_quality_control_evaluation_aggregator_4(capsule_aind_fip_nwb_base_capsule_2.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5, capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6.collect(), capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7, capsule_aind_fip_qc_raw_1.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_8.collect())
 }
