@@ -50,13 +50,13 @@
 			]
 		},
 		{
-			"name": "capsule_aind_fip_dff_pav_3",
+			"name": "capsule_copy_of_aind_fip_dff_3",
 			"capsule": {
-				"id": "6983b2e1-1392-46dd-a863-53a2503d754c",
-				"name": "aind-fip-dff - Pav",
-				"slug": "9295560",
-				"commit": "03e21945be382cfe25785fd95e964fcbb0d2c990",
-				"image_tag": "97bed0c6ba28a99a527490a152451878"
+				"id": "168d57dc-d454-49b3-ba42-edb82b73f17c",
+				"name": "Copy of aind-fip-dff",
+				"slug": "1828847",
+				"commit": "973884204b582e591a9a406c7867934d8cbd4679",
+				"image_tag": "082d15501851b62c1c203bf5e9cbea39"
 			},
 			"resources": {
 				"cpus": 2,
@@ -82,7 +82,7 @@
 				}
 			],
 			"results": {
-				"id": "6983b2e1-1392-46dd-a863-53a2503d754c",
+				"id": "168d57dc-d454-49b3-ba42-edb82b73f17c",
 				"source_path": "nwb"
 			}
 		},
@@ -109,17 +109,17 @@
 				},
 				{
 					"id": "W5zrn2OHRsFLxxAY",
-					"source_id": "capsule_aind_fip_dff_pav_3",
+					"source_id": "capsule_copy_of_aind_fip_dff_3",
 					"type": "capsule",
-					"name": "aind-fip-dff - Pav",
+					"name": "Copy of aind-fip-dff",
 					"source_path": "*.json",
 					"collect": true
 				},
 				{
 					"id": "imhCYI0kHn1pzOzr",
-					"source_id": "capsule_aind_fip_dff_pav_3",
+					"source_id": "capsule_copy_of_aind_fip_dff_3",
 					"type": "capsule",
-					"name": "aind-fip-dff - Pav",
+					"name": "Copy of aind-fip-dff",
 					"source_path": "dff-qc",
 					"target_path": "dff-qc"
 				},

@@ -1,9 +1,9 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__capsule_aind_fip_nwb_base_capsule_2-capsule_aind_fip_dff_pav_3",
+			"id": "xy-edge__capsule_aind_fip_nwb_base_capsule_2-capsule_copy_of_aind_fip_dff_3",
 			"source": "capsule_aind_fip_nwb_base_capsule_2",
-			"target": "capsule_aind_fip_dff_pav_3"
+			"target": "capsule_copy_of_aind_fip_dff_3"
 		},
 		{
 			"id": "xy-edge__capsule_aind_fip_qc_raw_1-capsule_aind_generic_quality_control_evaluation_aggregator_4",
@@ -11,13 +11,13 @@
 			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
 		},
 		{
-			"id": "xy-edge__capsule_aind_fip_dff_pav_3-capsule_aind_generic_quality_control_evaluation_aggregator_4",
-			"source": "capsule_aind_fip_dff_pav_3",
+			"id": "xy-edge__capsule_copy_of_aind_fip_dff_3-capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"source": "capsule_copy_of_aind_fip_dff_3",
 			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
 		},
 		{
-			"id": "xy-edge__capsule_aind_fip_dff_pav_3-results",
-			"source": "capsule_aind_fip_dff_pav_3",
+			"id": "xy-edge__capsule_copy_of_aind_fip_dff_3-results",
+			"source": "capsule_copy_of_aind_fip_dff_3",
 			"target": "results"
 		},
 		{
@@ -31,9 +31,9 @@
 			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
 		},
 		{
-			"id": "xy-edge__fd35087a-e9bd-43c1-a8b7-bbef5825623f-capsule_aind_fip_dff_pav_3",
+			"id": "xy-edge__fd35087a-e9bd-43c1-a8b7-bbef5825623f-capsule_copy_of_aind_fip_dff_3",
 			"source": "fd35087a-e9bd-43c1-a8b7-bbef5825623f",
-			"target": "capsule_aind_fip_dff_pav_3"
+			"target": "capsule_copy_of_aind_fip_dff_3"
 		},
 		{
 			"id": "xy-edge__fd35087a-e9bd-43c1-a8b7-bbef5825623f-capsule_aind_fip_nwb_base_capsule_2",
@@ -103,9 +103,9 @@
 		},
 		{
 			"data": {
-				"capsule_id": "6983b2e1-1392-46dd-a863-53a2503d754c"
+				"capsule_id": "168d57dc-d454-49b3-ba42-edb82b73f17c"
 			},
-			"id": "capsule_aind_fip_dff_pav_3",
+			"id": "capsule_copy_of_aind_fip_dff_3",
 			"position": {
 				"x": 1315.111083984375,
 				"y": 1023.111104329427
@@ -114,5 +114,5 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1788043367945
+	"timestamp": 1788044618731
 }
