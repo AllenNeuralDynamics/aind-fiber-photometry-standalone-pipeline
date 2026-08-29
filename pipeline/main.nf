@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:780c96e710b65d1723936e5007001b2492ce4ad6e741317bf600c65d140e45db
+// hash:sha256:0f0babb427cb0090949d3fbcdf15bc86c4c898338d55ad28382550be35703d3a
 
 // capsule - aind-fip-nwb-base-capsule
 process capsule_aind_fip_nwb_base_capsule_2 {
@@ -197,7 +197,7 @@ process capsule_aind_generic_quality_control_evaluation_aggregator_4 {
 	"""
 }
 
-params.fiber_raw_data_url = 's3://aind-open-data/behavior_821786_2026-02-23_14-13-33'
+params.fiber_raw_data_url = 's3://aind-open-data/behavior_816881_2026-02-12_15-39-11'
 
 workflow {
 	// input data
