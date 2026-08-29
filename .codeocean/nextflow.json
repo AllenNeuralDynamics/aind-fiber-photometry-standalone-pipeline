@@ -68,7 +68,7 @@
 					"source_id": "capsule_aind_fip_nwb_base_capsule_2",
 					"type": "capsule",
 					"name": "aind-fip-nwb-base-capsule",
-					"target_path": "fib_raw_nwb",
+					"target_path": "fiber_raw_nwb",
 					"collect": true
 				},
 				{

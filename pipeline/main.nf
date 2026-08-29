@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:c64a368aa59333bf60d1431b063314c61f0fd3aac4eab42145d3b921be9eef26
+// hash:sha256:780c96e710b65d1723936e5007001b2492ce4ad6e741317bf600c65d140e45db
 
 // capsule - aind-fip-nwb-base-capsule
 process capsule_aind_fip_nwb_base_capsule_2 {
@@ -105,7 +105,7 @@ process capsule_copy_of_aind_fip_dff_3 {
 	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> filename.matches("capsule/results/nwb") ? new File(filename).getName() : null }
 
 	input:
-	path 'capsule/data/fib_raw_nwb/'
+	path 'capsule/data/fiber_raw_nwb/'
 	path 'capsule/data/fiber_raw_data'
 
 	output:

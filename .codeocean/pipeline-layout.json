@@ -2,6 +2,7 @@
 	"edges": [
 		{
 			"id": "xy-edge__capsule_aind_fip_nwb_base_capsule_2-capsule_copy_of_aind_fip_dff_3",
+			"selected": false,
 			"source": "capsule_aind_fip_nwb_base_capsule_2",
 			"target": "capsule_copy_of_aind_fip_dff_3"
 		},
@@ -98,7 +99,7 @@
 				"x": 750.5427268368775,
 				"y": 889.8663331153936
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -110,9 +111,14 @@
 				"x": 1315.111083984375,
 				"y": 1023.111104329427
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1788044618731
+	"timestamp": 1788047289629,
+	"viewport": {
+		"x": -170.75903688303356,
+		"y": -465.7548175599263,
+		"zoom": 0.4766368834896249
+	}
 }
