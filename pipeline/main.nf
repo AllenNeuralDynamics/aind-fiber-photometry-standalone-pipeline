@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:358f826306705218f2e5c19cb14904b3bfe3c4862a37264be223d5e308746817
+// hash:sha256:c4d857f7564cf8d603cd0ed9ed237cd5e48da2bd3ba795fa8720c0846311800c
 
 // capsule - aind-fip-nwb-base-capsule
 process capsule_aind_fip_nwb_base_capsule_2 {
@@ -13,7 +13,7 @@ process capsule_aind_fip_nwb_base_capsule_2 {
 	path 'capsule/data/fiber_raw_data'
 
 	output:
-	path 'capsule/results/*', emit: to_capsule_aind_fip_dff_3_3
+	path 'capsule/results/*', emit: to_capsule_aind_fip_dff_pav_3_3
 	path 'capsule/results/alignment-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5
 
 	script:
@@ -94,10 +94,10 @@ process capsule_aind_fip_qc_raw_1 {
 	"""
 }
 
-// capsule - aind-fip-dff
-process capsule_aind_fip_dff_3 {
-	tag 'capsule-1001867'
-	container "$REGISTRY_HOST/published/603a2149-6281-4a7b-bbd6-ff50ca0e064e:v15"
+// capsule - aind-fip-dff - Pav
+process capsule_aind_fip_dff_pav_3 {
+	tag 'capsule-9295560'
+	container "$REGISTRY_HOST/capsule/6983b2e1-1392-46dd-a863-53a2503d754c"
 
 	cpus 2
 	memory '15 GB'
@@ -118,7 +118,7 @@ process capsule_aind_fip_dff_3 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=603a2149-6281-4a7b-bbd6-ff50ca0e064e
+	export CO_CAPSULE_ID=6983b2e1-1392-46dd-a863-53a2503d754c
 	export CO_CPUS=2
 	export CO_MEMORY=16106127360
 
@@ -129,9 +129,9 @@ process capsule_aind_fip_dff_3 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9295560.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1001867.git" capsule-repo
+		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9295560.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -202,11 +202,11 @@ workflow {
 	// input data
 	fiber_raw_data_to_aind_fip_qc_raw_1 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
 	fiber_raw_data_to_aind_fip_nwb_base_capsule_2 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
-	fiber_raw_data_to_aind_fip_dff_4 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
+	fiber_raw_data_to_aind_fip_dff_pav_4 = Channel.fromPath(params.fiber_raw_data_url + "/", type: 'any')
 
 	// run processes
 	capsule_aind_fip_nwb_base_capsule_2(fiber_raw_data_to_aind_fip_nwb_base_capsule_2.collect())
 	capsule_aind_fip_qc_raw_1(fiber_raw_data_to_aind_fip_qc_raw_1.collect())
-	capsule_aind_fip_dff_3(capsule_aind_fip_nwb_base_capsule_2.out.to_capsule_aind_fip_dff_3_3.collect(), fiber_raw_data_to_aind_fip_dff_4.collect())
-	capsule_aind_generic_quality_control_evaluation_aggregator_4(capsule_aind_fip_nwb_base_capsule_2.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5, capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6.collect(), capsule_aind_fip_dff_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7, capsule_aind_fip_qc_raw_1.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_8.collect())
+	capsule_aind_fip_dff_pav_3(capsule_aind_fip_nwb_base_capsule_2.out.to_capsule_aind_fip_dff_pav_3_3.collect(), fiber_raw_data_to_aind_fip_dff_pav_4.collect())
+	capsule_aind_generic_quality_control_evaluation_aggregator_4(capsule_aind_fip_nwb_base_capsule_2.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_5, capsule_aind_fip_dff_pav_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6.collect(), capsule_aind_fip_dff_pav_3.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7, capsule_aind_fip_qc_raw_1.out.to_capsule_aind_generic_quality_control_evaluation_aggregator_4_8.collect())
 }

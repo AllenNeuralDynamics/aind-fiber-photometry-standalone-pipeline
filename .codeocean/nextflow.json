@@ -50,12 +50,11 @@
 			]
 		},
 		{
-			"name": "capsule_aind_fip_dff_3",
+			"name": "capsule_aind_fip_dff_pav_3",
 			"capsule": {
-				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
-				"name": "aind-fip-dff",
-				"slug": "1001867",
-				"version": 15
+				"id": "6983b2e1-1392-46dd-a863-53a2503d754c",
+				"name": "aind-fip-dff - Pav",
+				"slug": "9295560"
 			},
 			"resources": {
 				"cpus": 2,
@@ -81,7 +80,7 @@
 				}
 			],
 			"results": {
-				"id": "603a2149-6281-4a7b-bbd6-ff50ca0e064e",
+				"id": "6983b2e1-1392-46dd-a863-53a2503d754c",
 				"source_path": "nwb"
 			}
 		},
@@ -108,17 +107,17 @@
 				},
 				{
 					"id": "W5zrn2OHRsFLxxAY",
-					"source_id": "capsule_aind_fip_dff_3",
+					"source_id": "capsule_aind_fip_dff_pav_3",
 					"type": "capsule",
-					"name": "aind-fip-dff",
+					"name": "aind-fip-dff - Pav",
 					"source_path": "*.json",
 					"collect": true
 				},
 				{
 					"id": "imhCYI0kHn1pzOzr",
-					"source_id": "capsule_aind_fip_dff_3",
+					"source_id": "capsule_aind_fip_dff_pav_3",
 					"type": "capsule",
-					"name": "aind-fip-dff",
+					"name": "aind-fip-dff - Pav",
 					"source_path": "dff-qc",
 					"target_path": "dff-qc"
 				},
