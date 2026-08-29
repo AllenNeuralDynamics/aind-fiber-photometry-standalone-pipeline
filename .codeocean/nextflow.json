@@ -54,7 +54,9 @@
 			"capsule": {
 				"id": "6983b2e1-1392-46dd-a863-53a2503d754c",
 				"name": "aind-fip-dff - Pav",
-				"slug": "9295560"
+				"slug": "9295560",
+				"commit": "03e21945be382cfe25785fd95e964fcbb0d2c990",
+				"image_tag": "97bed0c6ba28a99a527490a152451878"
 			},
 			"resources": {
 				"cpus": 2,
