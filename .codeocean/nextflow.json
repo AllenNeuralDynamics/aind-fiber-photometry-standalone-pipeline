@@ -55,7 +55,7 @@
 				"id": "168d57dc-d454-49b3-ba42-edb82b73f17c",
 				"name": "aind-fip-dff Pav",
 				"slug": "1828847",
-				"commit": "973884204b582e591a9a406c7867934d8cbd4679",
+				"commit": "6407374ca402bf7cbf5a07295989534d1ae9a002",
 				"image_tag": "082d15501851b62c1c203bf5e9cbea39"
 			},
 			"resources": {
@@ -68,7 +68,7 @@
 					"source_id": "capsule_aind_fip_nwb_base_capsule_2",
 					"type": "capsule",
 					"name": "aind-fip-nwb-base-capsule",
-					"target_path": "fiber_raw_nwb",
+					"target_path": "fib_raw_nwb",
 					"collect": true
 				},
 				{
@@ -83,7 +83,7 @@
 			],
 			"results": {
 				"id": "168d57dc-d454-49b3-ba42-edb82b73f17c",
-				"source_path": "nwb"
+				"source_path": "fib.nwb.zarr"
 			}
 		},
 		{

@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:0f0babb427cb0090949d3fbcdf15bc86c4c898338d55ad28382550be35703d3a
+// hash:sha256:6e7cb912c72666b282a93191bd4fd8d8b1ce769a483f95ce9067712125f946a6
 
 // capsule - aind-fip-nwb-base-capsule
 process capsule_aind_fip_nwb_base_capsule_2 {
@@ -102,14 +102,14 @@ process capsule_copy_of_aind_fip_dff_3 {
 	cpus 2
 	memory '15 GB'
 
-	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> filename.matches("capsule/results/nwb") ? new File(filename).getName() : null }
+	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> filename.matches("capsule/results/fib\\.nwb\\.zarr") ? new File(filename).getName() : null }
 
 	input:
-	path 'capsule/data/fiber_raw_nwb/'
+	path 'capsule/data/fib_raw_nwb/'
 	path 'capsule/data/fiber_raw_data'
 
 	output:
-	path 'capsule/results/nwb'
+	path 'capsule/results/fib.nwb.zarr'
 	path 'capsule/results/*.json', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_6
 	path 'capsule/results/dff-qc', emit: to_capsule_aind_generic_quality_control_evaluation_aggregator_4_7
 
@@ -133,7 +133,7 @@ process capsule_copy_of_aind_fip_dff_3 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1828847.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 973884204b582e591a9a406c7867934d8cbd4679 --quiet
+	git -C capsule-repo checkout 6407374ca402bf7cbf5a07295989534d1ae9a002 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
