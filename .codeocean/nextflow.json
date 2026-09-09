@@ -26,12 +26,12 @@
 			]
 		},
 		{
-			"name": "capsule_aind_fip_nwb_base_capsule_2",
+			"name": "capsule_aind_fip_nwb_base_standalone_2",
 			"capsule": {
-				"id": "e45742e4-7920-4985-ba36-262bc891377a",
-				"name": "aind-fip-nwb-base-capsule",
-				"slug": "0550370",
-				"version": 23
+				"id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b",
+				"name": "aind-fip-nwb-base-standalone",
+				"slug": "1510487",
+				"version": 7
 			},
 			"resources": {
 				"cpus": 1,
@@ -65,9 +65,9 @@
 			"inputs": [
 				{
 					"id": "wH714lSlW49WLVQq",
-					"source_id": "capsule_aind_fip_nwb_base_capsule_2",
+					"source_id": "capsule_aind_fip_nwb_base_standalone_2",
 					"type": "capsule",
-					"name": "aind-fip-nwb-base-capsule",
+					"name": "aind-fip-nwb-base-standalone",
 					"target_path": "fib_raw_nwb",
 					"collect": true
 				},
@@ -101,9 +101,9 @@
 			"inputs": [
 				{
 					"id": "babNwq4D4DTbXUNF",
-					"source_id": "capsule_aind_fip_nwb_base_capsule_2",
+					"source_id": "capsule_aind_fip_nwb_base_standalone_2",
 					"type": "capsule",
-					"name": "aind-fip-nwb-base-capsule",
+					"name": "aind-fip-nwb-base-standalone",
 					"source_path": "alignment-qc",
 					"target_path": "alignment-qc"
 				},

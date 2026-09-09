@@ -1,9 +1,8 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__capsule_aind_fip_nwb_base_capsule_2-capsule_copy_of_aind_fip_dff_3",
-			"selected": false,
-			"source": "capsule_aind_fip_nwb_base_capsule_2",
+			"id": "xy-edge__capsule_aind_fip_nwb_base_standalone_2-capsule_copy_of_aind_fip_dff_3",
+			"source": "capsule_aind_fip_nwb_base_standalone_2",
 			"target": "capsule_copy_of_aind_fip_dff_3"
 		},
 		{
@@ -27,8 +26,8 @@
 			"target": "results"
 		},
 		{
-			"id": "xy-edge__capsule_aind_fip_nwb_base_capsule_2-capsule_aind_generic_quality_control_evaluation_aggregator_4",
-			"source": "capsule_aind_fip_nwb_base_capsule_2",
+			"id": "xy-edge__capsule_aind_fip_nwb_base_standalone_2-capsule_aind_generic_quality_control_evaluation_aggregator_4",
+			"source": "capsule_aind_fip_nwb_base_standalone_2",
 			"target": "capsule_aind_generic_quality_control_evaluation_aggregator_4"
 		},
 		{
@@ -37,9 +36,9 @@
 			"target": "capsule_copy_of_aind_fip_dff_3"
 		},
 		{
-			"id": "xy-edge__0aef39ba-8dbd-462c-ad71-7c38da5fef1b-capsule_aind_fip_nwb_base_capsule_2",
+			"id": "xy-edge__0aef39ba-8dbd-462c-ad71-7c38da5fef1b-capsule_aind_fip_nwb_base_standalone_2",
 			"source": "0aef39ba-8dbd-462c-ad71-7c38da5fef1b",
-			"target": "capsule_aind_fip_nwb_base_capsule_2"
+			"target": "capsule_aind_fip_nwb_base_standalone_2"
 		},
 		{
 			"id": "xy-edge__0aef39ba-8dbd-462c-ad71-7c38da5fef1b-capsule_aind_fip_qc_raw_1",
@@ -83,18 +82,6 @@
 		},
 		{
 			"data": {
-				"capsule_id": "e45742e4-7920-4985-ba36-262bc891377a"
-			},
-			"id": "capsule_aind_fip_nwb_base_capsule_2",
-			"position": {
-				"x": 750.5427268368775,
-				"y": 889.8663331153936
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
 				"capsule_id": "168d57dc-d454-49b3-ba42-edb82b73f17c"
 			},
 			"id": "capsule_copy_of_aind_fip_dff_3",
@@ -112,12 +99,19 @@
 				"y": 648.4444376627604
 			},
 			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b"
+			},
+			"id": "capsule_aind_fip_nwb_base_standalone_2",
+			"position": {
+				"x": 750.5427268368775,
+				"y": 889.8663331153936
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1788060789776,
-	"viewport": {
-		"x": -190.5674305354617,
-		"y": -265.94947080258976,
-		"zoom": 0.49588477366255146
-	}
+	"timestamp": 1788997967494
 }
