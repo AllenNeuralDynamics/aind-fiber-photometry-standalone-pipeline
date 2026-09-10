@@ -28,10 +28,9 @@
 		{
 			"name": "capsule_aind_fip_nwb_base_standalone_2",
 			"capsule": {
-				"id": "8ad7652f-d8cb-4104-a2fe-1c45ebf0fb2b",
+				"id": "cdefa359-e1f9-45c9-9fe7-7f42b87983e9",
 				"name": "aind-fip-nwb-base-standalone",
-				"slug": "1510487",
-				"version": 7
+				"slug": "4679507"
 			},
 			"resources": {
 				"cpus": 1,
