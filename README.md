@@ -1,10 +1,4 @@
-> ## ⚠️ Deprecated: do not use
->
-> **This repository was never rolled out and was never put into production.** It was an early, fiber-modality-specific standalone pipeline that never went into service, is unmaintained, and is slated to be archived.
->
-> **Do not use it to process fiber photometry data.** For current fiber photometry processing, use the actively maintained AIND fiber photometry pipeline instead.
-
----
+**This pipeline is a fiber only processing pipeline for data acquired using the original hardware configuration for rigs using the Teensy device. This pipeline is only used for data being collected for the Pavlovian task. It contains `aind-data-schema` version 1.x and will not get upgraded version 2.x. Once data collection is done for a project using the Pavlovian task in 2027, the rigs will be upgraded with HARP devices and will use [this](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-harp-pipeline) pipeline instead.**  
 
 # Fiber Photometry processing pipeline
 This is a pipeline in development to process Fiber Photometry data adapted to a fiber acquisition standard defined here: [Fiber Photometry Acquisition Standard](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/file_formats/fip.md).
