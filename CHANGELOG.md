@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.3.0...v0.3.1) (2026-09-24)
+
+
+### Bug Fixes
+
+* correct Code Ocean links and FIP standard wording in README ([1bdd19a](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/1bdd19a4524a18f6c7d7a7782b2f5a0c729e1b14))
+
+
+
 # [0.3.0](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.4...v0.3.0) (2026-09-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * add .codeocean folder ([640e7e6](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/640e7e684f3df369814477b12856e102d348140e))
-
-
-
-## [0.2.1](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/compare/v0.2.0...v0.2.1) (2026-03-12)
-
-
-### Bug Fixes
-
-* remove ui components so that CO can add them back in and preserve the UI ([8350999](https://github.com/AllenNeuralDynamics/aind-fiber-photometry-standalone-pipeline/commit/8350999949255b06098b4459f459964086aeeaa2))
 
 
 
