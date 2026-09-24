@@ -184,7 +184,7 @@ No parameters are used for this pipeline
 
 # Run
 
-The pipeline runs in Code Ocean as the [released pipeline](https://codeocean.allenneuraldynamics.org/capsule/3996339) described above. If a user has credentials for `aind` Code Ocean, the pipeline can be run using the [Code Ocean API](https://github.com/codeocean/codeocean-sdk-python). 
+The pipeline runs in Code Ocean at the links above. If a user has credentials for `aind` Code Ocean, the pipeline can be run using the [Code Ocean API](https://github.com/codeocean/codeocean-sdk-python). 
 
 Derived from the example on the [Code Ocean API Github](https://github.com/codeocean/codeocean-sdk-python/blob/main/examples/run_pipeline.py)
 
