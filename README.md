@@ -3,9 +3,14 @@
 
 
 # Fiber Photometry processing pipeline
-This is a pipeline in development to process Fiber Photometry data adapted to a fiber acquisition standard defined here: [Fiber Photometry Acquisition Standard](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/file_formats/fip.md).
+This pipeline processes fiber photometry data from an earlier variant of the FIP system, built before the [Fiber Photometry Acquisition Standard](https://github.com/AllenNeuralDynamics/aind-file-standards/blob/main/docs/modalities/fip.md) was defined. Data processed by this pipeline does not follow that standard.
 
-The [fiber photometry pipeline](https://codeocean.allenneuraldynamics.org/capsule/0885100/tree) runs on [Nextflow](https://www.nextflow.io/) and contains the following steps:
+The pipeline runs on [Nextflow](https://www.nextflow.io/) and exists in Code Ocean as two copies:
+
+* [Editable pipeline](https://codeocean.allenneuraldynamics.org/capsule/0885100/tree): the development copy. Changes are made and released from here.
+* [Released pipeline](https://codeocean.allenneuraldynamics.org/capsule/3996339): the version that runs on data. The URL has no release number, so it always resolves to the latest release. Use this one unless you are changing the pipeline.
+
+The pipeline contains the following steps:
 
 * [aind-fip-nwb-base-capsule](https://github.com/AllenNeuralDynamics/aind-fip-nwb-base-capsule-standalone): FiberPhotometry Capsule which appends to an NWB subject file and packages raw timeseries data.
 
@@ -21,7 +26,7 @@ Currently, the pipeline supports the following input data types:
 
 * `aind`: data ingestion used at AIND. If an "fib" folder is included, fiber data will be packaged. The root directory must contain JSON files following [aind-data-schema](https://github.com/AllenNeuralDynamics/aind-data-schema).
 
-Under the `fib` folder, the data will be stored as defined in the file standard linked above.
+The `fib` folder holds the raw output from the Teensy-based FIP rigs. That layout predates the file standard linked above.
 
 ```plaintext
 📦data
@@ -179,7 +184,7 @@ No parameters are used for this pipeline
 
 # Run
 
-`aind` Runs in the Code Ocean pipeline [here](https://codeocean.allenneuraldynamics.org/capsule/7026342/tree). If a user has credentials for `aind` Code Ocean, the pipeline can be run using the [Code Ocean API](https://github.com/codeocean/codeocean-sdk-python). 
+The pipeline runs in Code Ocean at the links above. If a user has credentials for `aind` Code Ocean, the pipeline can be run using the [Code Ocean API](https://github.com/codeocean/codeocean-sdk-python). 
 
 Derived from the example on the [Code Ocean API Github](https://github.com/codeocean/codeocean-sdk-python/blob/main/examples/run_pipeline.py)
 
